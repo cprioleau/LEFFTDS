@@ -5,7 +5,7 @@ searchPubMed('AG045390[Grant Number]')
 
 function searchPubMed(term) {
     return $.ajax({
-        url: 'http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=AG045390%5BGrant%20Number%5D',
+        url: 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=AG045390%5BGrant%20Number%5D',
         data: {
             db: 'pubmed',
             usehistory: 'y',
@@ -18,7 +18,7 @@ function searchPubMed(term) {
 
 function fetchResults(response) {
     return $.ajax({
-        url: 'http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi',
+        url: 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi',
         data: {
             db: 'pubmed',
             usehistory: 'y',
